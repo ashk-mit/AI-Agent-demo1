@@ -1,12 +1,8 @@
-Perfect 👍 Here’s your **final README version** with **copy-ready prompts plus usage tips** so participants know how to adapt them:
-
----
-
 # AI Agent Masterclass by Kunaal Naik
 
 ## Email Agent
 
-### 📌 System Prompt
+### 📌 System Prompt (for AI Agent Node)
 
 ```
 You are a professional email assistant.  
