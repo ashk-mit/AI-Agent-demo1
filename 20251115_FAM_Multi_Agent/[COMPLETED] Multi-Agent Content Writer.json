@@ -1,0 +1,381 @@
+{
+  "name": "[COMPLETED] Multi-Agent Content Writer",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "77b836f8-44c3-4dac-a3c1-183fa61f28ad",
+      "name": "When chat message received",
+      "webhookId": "0219dd88-2f76-4b93-aae0-d5845bd00392"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a Newsletter Orchestrator AI. The user will provide only a topic.\n\nYour job is to automatically run the full pipeline in order:\n\nResearch Topics → expand and refine the user’s topic into 3–5 relevant angles.\n\nCreate Titles → generate 5 catchy titles for the newsletter.\n\nCreate Description → write a short, compelling intro (2–3 sentences).\n\nCreate Script → expand into a full newsletter draft (250–400 words) with intro, main insight, and closing.\n\nAlways pass outputs step-by-step to the next specialist until the full newsletter is ready."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        336,
+        0
+      ],
+      "id": "029c50c0-78dd-4de3-84df-6c809973fd5b",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "content": "## Research Agent\n",
+        "height": 432,
+        "width": 320
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -240,
+        352
+      ],
+      "typeVersion": 1,
+      "id": "8a44d262-92bc-4969-9dc6-002f6fe2382e",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## Titles Agent\n",
+        "height": 432,
+        "width": 272
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        96,
+        352
+      ],
+      "typeVersion": 1,
+      "id": "30047f62-dad9-4fbd-9ed0-a8dab9b4c9ac",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "## Description Agent",
+        "height": 432,
+        "width": 272
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        384,
+        352
+      ],
+      "typeVersion": 1,
+      "id": "a9f1e480-6f9b-4f30-b814-3c55fdeb7419",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "## Script Agent\n",
+        "height": 432,
+        "width": 272
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        672,
+        352
+      ],
+      "typeVersion": 1,
+      "id": "964db39e-1ca8-4b06-b33e-5a0a0cd030db",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        208,
+        176
+      ],
+      "id": "df1e75b2-b771-4c89-9c25-f1b04ea46537",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "bBruclyhk4q2jq6b",
+          "name": "Arpan's gemini"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -176,
+        640
+      ],
+      "id": "4736901c-c3e9-4a64-945f-89c9b20d1acd",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "O6SF0bLV6YzzpRJP",
+          "name": "KN GG - 10 NOV 2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        160,
+        640
+      ],
+      "id": "1d7a039f-0004-401b-ba65-b4fb9627f8e5",
+      "name": "Google Gemini Chat Model2",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "O6SF0bLV6YzzpRJP",
+          "name": "KN GG - 10 NOV 2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        432,
+        640
+      ],
+      "id": "510e3c48-fa40-4309-a3f6-43ec26734489",
+      "name": "Google Gemini Chat Model3",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "O6SF0bLV6YzzpRJP",
+          "name": "KN GG - 10 NOV 2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        720,
+        640
+      ],
+      "id": "132cf57b-1c16-4c44-a775-79ac9b1c7bd2",
+      "name": "Google Gemini Chat Model4",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "O6SF0bLV6YzzpRJP",
+          "name": "KN GG - 10 NOV 2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to research topics",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "Research and suggest 3–5 trending, relevant newsletter topics for the given input. Keep them short and clear."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        -176,
+        432
+      ],
+      "id": "90c0c52b-fa57-4c2b-8da7-705d43194160",
+      "name": "Research Topics"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to create title",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "Generate 5 catchy newsletter titles based on the given topics. Keep them short, engaging, and professional."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        128,
+        432
+      ],
+      "id": "032fcec4-ec99-4d8b-9779-2ca829d16b28",
+      "name": "Create Titles"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to create description",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "Write a short, compelling description (2–3 sentences) for the newsletter based on the chosen title/topic. Make it clear and inviting."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        416,
+        432
+      ],
+      "id": "7f095a87-2add-4147-8d1d-91411096d9a4",
+      "name": "Create Description"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to create the script",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "Write a full newsletter draft (250–400 words) based on the given topic and description. Keep the tone professional but conversational. Structure with an intro, main insight, and closing."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        672,
+        432
+      ],
+      "id": "e14a70a6-1e37-42ff-88c5-e2fa76e16afa",
+      "name": "Create Script"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Research Topics",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Titles",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Description",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Script",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research Topics": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Titles": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Description": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Script": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "98e7fe71-e139-42b0-a048-f578089ca5c8",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d85661857dfcd1207ce11ef23fab2db3d27371fb05cc9bce02662a3f60039047"
+  },
+  "id": "4yTlAY3BHUi4xU4m",
+  "tags": []
+}

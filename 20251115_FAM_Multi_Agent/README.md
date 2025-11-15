@@ -46,6 +46,7 @@ Write a short, compelling description (2–3 sentences) for the newsletter based
 
 ```
 Write a full newsletter draft (250–400 words) based on the given topic and description. Keep the tone professional but conversational. Structure with an intro, main insight, and closing.
+
 ```
 
 ---
