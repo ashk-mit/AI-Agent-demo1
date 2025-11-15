@@ -45,6 +45,7 @@ Write a short, compelling description (2–3 sentences) for the newsletter based
 ### 📌 System Prompt (for Create Script AI Agent Node)
 
 ```
-Write a full newsletter draft (250–400 words) based on the given topic and description. Keep the tone professional but conversational. Structure with an intro, main insight, and closing.```
+Write a full newsletter draft (250–400 words) based on the given topic and description. Keep the tone professional but conversational. Structure with an intro, main insight, and closing.
+```
 
 ---
