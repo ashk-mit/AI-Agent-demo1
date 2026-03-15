@@ -1,4 +1,4 @@
-# Fastrack Agentic Mastery
+# Fastrack Agentic Mastery- courtsey thanks KK
 
 ## Multi-Agent
 
