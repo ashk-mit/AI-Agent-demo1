@@ -1,4 +1,4 @@
-# AI Agent Masterclass by Kunaal Naik
+# AI Agent Masterclass
 
 ## Email Agent
 
